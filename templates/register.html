@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+<head>
+    <title>Register Page</title>
+</head>
+<body>
+        <div class="container">
+            <div class="a">
+                <h1 style="color: black;">Register</h1> <br> <br>
+                <form action="/registeraccount" method="POST">
+                    <p>First Name: <input type="text" name="firstname"></p>
+                    <p>Last Name: <input type="text" name="lastname"></p>
+                    <p>Address: <input type="text" name="address"></p>
+                    <p>City: <input type="text" name="city"></p>
+                    <p>Postal Code: <input type="text" name="postalcode"></p>
+                    <p>Country: <input type="text" name="country"></p>
+                    <p>Username: <input type="text" name="username"></p>
+                    <p>Password: <input type="text" name="password"></p>
+                    <input type="submit" value="Register" class="calculatebtn" role="button">
+                    <p>{{status}}</p>
+                    <br><br><br><br>
+                </form>
+                <a href="/usertable"><input value="See table" class="calculatebtn" role="button"></a>
+            </div>
+        </div>
+</body>

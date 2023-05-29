@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+<head>
+    <title>Update Info</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Editing PersonID: {{userid}}</h3>
+        <form action="/updateinfo" method="POST">
+            <p>Last Name: <input type="text" name="lastname", value="{{myresult[1]}}"></p>
+            <p>First Name: <input type="text" name="firstname", value="{{myresult[2]}}"></p>
+            <p>Address: <input type="text" name="address", value="{{myresult[3]}}"></p>
+            <p>City: <input type="text" name="city", value="{{myresult[4]}}"></p>
+            <p>Postal Code: <input type="text" name="postalcode", value="{{myresult[5]}}"></p>
+            <p>Country: <input type="text" name="country", value="{{myresult[6]}}"></p>
+            <p>Username: <input type="text" name="username", value="{{myresult[7]}}"></p>
+            <p>Password: <input type="text" name="password", value="{{myresult[8]}}"></p>
+            <input type="submit" value="Update" class="calculatebtn" role="button">
+            <p>Status:: {{status}}</p>
+        </form>
+    </div>
+</body>
